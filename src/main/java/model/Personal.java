@@ -1,9 +1,8 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Personal {
@@ -15,5 +14,10 @@ public class Personal {
     private String nombre;
 
     private String apellidos;
+
+    private String responsabilidades;
+
+    @ManyToMany
+    private List<Paciente> pacientes;
 
 }

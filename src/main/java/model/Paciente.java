@@ -1,9 +1,8 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Paciente {
@@ -18,6 +17,7 @@ public class Paciente {
 
     private String nuss;
 
-
+    @ManyToMany
+    private List<Personal> medicos;
 
 }
