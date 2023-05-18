@@ -6,14 +6,14 @@ import jakarta.persistence.*;
 public class Consulta {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private int numero;
 
     private String uso;
 
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.DETACH)
     private Personal medicoAsignado;
 
 }

@@ -1,6 +1,6 @@
 package controller;
 
-import View.MenuView;
+import view.MenuView;
 
 public class MenuController {
 
@@ -68,14 +68,17 @@ public class MenuController {
 
                 case 1:
 
+                    pacienteController.insert();
                     break;
 
                 case 2:
 
+                    pacienteController.search();
                     break;
 
                 case 3:
 
+                    pacienteController.modificar();
                     break;
 
                 case 4:

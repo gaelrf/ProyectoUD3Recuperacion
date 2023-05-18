@@ -17,7 +17,10 @@ public class Personal {
 
     private String responsabilidades;
 
-    @ManyToMany
+    @OneToOne(mappedBy = "medicoAsignado" , cascade = CascadeType.DETACH)
+    private Consulta consulta;
+
+    @ManyToMany(mappedBy = "medicos")
     private List<Paciente> pacientes;
 
 }
