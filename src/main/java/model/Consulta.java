@@ -39,4 +39,13 @@ public class Consulta {
     public void setMedicoAsignado(Personal medicoAsignado) {
         this.medicoAsignado = medicoAsignado;
     }
+
+    @Override
+    public String toString() {
+        return "Consulta{" +
+                "numero=" + numero +
+                ", uso='" + uso + '\'' +
+                ", medicoAsignado=" + medicoAsignado +
+                '}';
+    }
 }

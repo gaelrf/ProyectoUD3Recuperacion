@@ -66,4 +66,13 @@ public class Personal {
     public void setPacientes(List<Paciente> pacientes) {
         this.pacientes = pacientes;
     }
+
+    @Override
+    public String toString() {
+        return "Personal{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", responsabilidades='" + responsabilidades + '\'' +
+                '}';
+    }
 }

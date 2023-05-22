@@ -8,6 +8,7 @@ public class MenuView {
         System.out.println("1. Paciente: ");
         System.out.println("2. Consulta: ");
         System.out.println("3. Personal: ");
+        System.out.println("-1. Consultas parametrizadas: ");
         System.out.println("0. Salir: ");
         op = Inputs.inputInt("Seleccione entidad a usar: ");
 
@@ -28,6 +29,19 @@ public class MenuView {
 
         return op;
 
+    }
+
+    public int consultasMenu() {
+
+        int op;
+
+        System.out.println("1. Lista de Pacientes de un médico: ");
+        System.out.println("2. Consultas por uso: ");
+        System.out.println("3. Consultas de un Paciente: ");
+        System.out.println("0. Salir: ");
+        op = Inputs.inputInt("Seleccione consulta a realizar: ");
+
+        return op;
     }
 
 }

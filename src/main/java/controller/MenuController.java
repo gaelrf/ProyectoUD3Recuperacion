@@ -8,12 +8,14 @@ public class MenuController {
     PacienteController pacienteController;
     ConsultaController consultaController;
     PersonalController personalController;
+    ConsultasController consultasController;
 
     public MenuController() {
         menuView = new MenuView();
         pacienteController = new PacienteController();
         consultaController = new ConsultaController();
         personalController = new PersonalController();
+        consultasController = new ConsultasController();
     }
 
     public void mainMenu(){
@@ -41,6 +43,9 @@ public class MenuController {
                     personalMenu();
                     break;
 
+                case -1:
+
+                    consultasMenu();
                 case 0:
 
                     break;
@@ -55,6 +60,7 @@ public class MenuController {
         } while (op != 0);
 
     }
+
 
     private void pacienteMenu() {
 
@@ -180,6 +186,47 @@ public class MenuController {
             }
 
         } while (op!=0);
+
+    }
+
+    private void consultasMenu() {
+
+        int op;
+
+        do {
+
+            op = menuView.consultasMenu();
+
+            switch (op){
+
+                case 1:
+
+                    consultasController.pacientesMedico();
+                    break;
+
+                case 2:
+
+                    consultasController.consultasUso();
+                    break;
+
+                case 3:
+
+                    consultasController.consultasPaciente();
+                    break;
+
+                case 0:
+
+                    break;
+
+                default:
+
+                    //todo Control de errores de entrada
+                    break;
+
+            }
+
+        } while (op!=0);
+
 
     }
 
