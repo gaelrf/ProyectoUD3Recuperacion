@@ -83,6 +83,7 @@ public class MenuController {
 
                 case 4:
 
+                    pacienteController.borrar();
                     break;
 
                 case 0:

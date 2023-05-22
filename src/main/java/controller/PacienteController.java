@@ -57,6 +57,20 @@ public class PacienteController {
 
 
     }
+    public void borrar(){
+
+        String nombre = pacienteView.nombrePaciente();
+        List<Paciente> pacientes = pacienteDAO.buscar(nombre);
+        operacion ="borrar";
+        Paciente paciente = pacienteView.seleccionar(pacientes, operacion);
+        if (paciente != null){
+
+            pacienteDAO.borrar(paciente);
+
+        }
+
+
+    }
 
 }
 

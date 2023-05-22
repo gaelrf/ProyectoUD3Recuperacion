@@ -76,12 +76,12 @@ public class PacienteView {
         System.out.println("El nombre actual del paciente es: "+paciente.getNombre());
         String nombre = Inputs.inputString("Introduzca el nuevo nombre del paciente: ");
         paciente.setNombre(nombre);
-        System.out.println("Los apellidos actuales del paciente son: "+paciente.getNombre());
+        System.out.println("Los apellidos actuales del paciente son: "+paciente.getApellidos());
         String apellido = Inputs.inputString("Introduzca los nuevos apellidos del paciente: ");
-        paciente.setNombre(apellido);
-        System.out.println("El NUSS actual del paciente es: "+paciente.getNombre());
+        paciente.setApellidos(apellido);
+        System.out.println("El NUSS actual del paciente es: "+paciente.getNuss());
         String nuss = Inputs.inputString("Introduzca el nuevo NUSS del paciente: ");
-        paciente.setNombre(nuss);
+        paciente.setNuss(nuss);
 
     }
 

@@ -56,10 +56,20 @@ public class PacienteDAO {
 
         em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.persist(paciente);
+        em.merge(paciente);
         em.getTransaction().commit();
         em.close();
 
     }
 
+    public void borrar(Paciente paciente) {
+
+        em = emf.createEntityManager();
+        em.getTransaction().begin();
+        paciente = em.merge(paciente);
+        em.remove(paciente);
+        em.getTransaction().commit();
+        em.close();
+
+    }
 }
