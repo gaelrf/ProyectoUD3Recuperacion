@@ -26,15 +26,11 @@ public class PersonalDAO {
 
 
     public void insert(Personal personal) {
-
-        System.out.println(personal);
-
         em =emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(personal);
         em.getTransaction().commit();
         em.close();
-
     }
 
     public List<Personal> buscar(String name){

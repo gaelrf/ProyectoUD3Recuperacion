@@ -7,7 +7,7 @@ import jakarta.persistence.Query;
 
 import java.util.List;
 
-public class ConsultaDAO {
+public class ConsultaDAO{
 
     EntityManagerFactory emf;
     EntityManager em;
@@ -26,22 +26,18 @@ public class ConsultaDAO {
 
 
     public void insert(Consulta consulta) {
-
-        System.out.println(consulta);
-
         em =emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(consulta);
         em.getTransaction().commit();
         em.close();
-
     }
 
     public List<Consulta> buscar(String name){
 
         em = emf.createEntityManager();
 
-        Query query = em.createQuery("select consulta from Consulta consulta where consulta.nombre = :name");
+        Query query = em.createQuery("select consulta from Consulta consulta where consulta.numero = :name");
         query.setParameter("name", name);
 
         List<Consulta> consultas = query.getResultList();

@@ -52,7 +52,7 @@ public class PersonalView {
         char confirmar = 'N';
         Personal personal = null;
         int aux = 0;
-        while (personals.size()>aux && (confirmar != 'S' || confirmar != 's')){
+        while (personals.size()>aux && (confirmar != 'S' && confirmar != 's')){
 
             System.out.println(personals.get(aux));
             confirmar = Inputs.inputChar("Es este el personal que deseas " + operacion + "? (S/N) ");

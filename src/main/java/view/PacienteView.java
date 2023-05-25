@@ -52,7 +52,7 @@ public class PacienteView {
         char confirmar = 'N';
         Paciente paciente = null;
         int aux = 0;
-        while (pacientes.size()>aux && (confirmar != 'S' || confirmar != 's')){
+        while (pacientes.size()>aux && (confirmar != 'S' && confirmar != 's')){
 
             System.out.println(pacientes.get(aux));
             confirmar = Inputs.inputChar("Es este el paciente que deseas " + operacion + "? (S/N) ");

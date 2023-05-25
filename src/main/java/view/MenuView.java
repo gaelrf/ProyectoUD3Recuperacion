@@ -8,6 +8,7 @@ public class MenuView {
         System.out.println("1. Paciente: ");
         System.out.println("2. Consulta: ");
         System.out.println("3. Personal: ");
+        System.out.println("4. Cita: ");
         System.out.println("-1. Consultas parametrizadas: ");
         System.out.println("0. Salir: ");
         op = Inputs.inputInt("Seleccione entidad a usar: ");

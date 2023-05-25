@@ -26,15 +26,11 @@ public class PacienteDAO {
 
 
     public void insert(Paciente paciente) {
-
-        System.out.println(paciente);
-
         em =emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(paciente);
         em.getTransaction().commit();
         em.close();
-
     }
 
     public List<Paciente> buscar(String name){

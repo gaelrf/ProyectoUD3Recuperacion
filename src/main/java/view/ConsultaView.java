@@ -50,7 +50,7 @@ public class ConsultaView {
         char confirmar = 'N';
         Consulta consulta = null;
         int aux = 0;
-        while (consultas.size()>aux && (confirmar != 'S' || confirmar != 's')){
+        while (consultas.size()>aux && (confirmar != 'S' && confirmar != 's')){
 
             System.out.println(consultas.get(aux));
             confirmar = Inputs.inputChar("Es este el consulta que deseas " + operacion + "? (S/N) ");
